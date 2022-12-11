@@ -1,4 +1,5 @@
 # ignore master data due to size
+/00_source_data/imdb_master.csv
 /00_source_data/IMDB\ Dataset.csv
 
 # ignore DS_Store files
