@@ -44,8 +44,8 @@ for i in range(len(df)):
         print(df["review"][i])
         print(ee)
         break
-
-    print(f"{i/len(df) *100}% done")
+    if (i * 1000)%len(df) == 0:
+        print(f"{i/len(df) *100:.1f}% done")
 # # save to csv
 df.to_csv("../01_processed_data/imdb_master_sentiment_codespaces.csv", index=False)
 
