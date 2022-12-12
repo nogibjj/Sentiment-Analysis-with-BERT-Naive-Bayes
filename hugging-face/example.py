@@ -11,7 +11,9 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 classifiers = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
 # classifiers = pipeline("sentiment-analysis")
-df = pd.read_csv("../00_source_data/imdb_master.csv", encoding="unicode_escape")
+url = "https://github.com/Yer1k/imdb_dataset/raw/main/imdb_master.csv"
+df = pd.read_csv(url, encoding="unicode_escape")
+# df = pd.read_csv("../00_source_data/imdb_master.csv", encoding="unicode_escape")
 # df["sentiment"] = df["review"].apply(lambda x: classifiers(x)[0]["label"])
 # df["sentiment_score"] = df["review"].apply(lambda x: classifiers(x)[0]["score"])
 
@@ -31,7 +33,7 @@ df = pd.read_csv("../00_source_data/imdb_master.csv", encoding="unicode_escape")
 
 df["sentiment"] = ""
 df["sentiment_score"] = 0.0
-for i in range(10):
+for i in range(len(df)):
     try:
         input = df["review"][i][0:1000]
         res = classifiers(input)
@@ -42,8 +44,10 @@ for i in range(10):
         print(df["review"][i])
         print(ee)
         break
+
+    print(f"{i/len(df) *100}% done")
 # # save to csv
-df.to_csv("../01_processed_data/imdb_master_sentiment.csv", index=False)
+df.to_csv("../01_processed_data/imdb_master_sentiment_codespaces.csv", index=False)
 
 # res = classifier("I hate this movie")
 # print(res)
