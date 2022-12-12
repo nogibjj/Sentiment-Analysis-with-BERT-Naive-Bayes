@@ -1,7 +1,6 @@
 """Generative model example."""
 import numpy as np
 from data import get_imdb_data
-from generative_model import NaiveBayesClassifier
 import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
@@ -14,7 +13,6 @@ from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import BernoulliNB
-from generative_model import NaiveBayesClassifier
 
 
 def cleanhtml(sentence):
@@ -81,31 +79,14 @@ def main():
     X, y = get_real_data_preprocessed()
     vectorizer = CountVectorizer()
     vectorizer.fit(X)
-    # print(vectorizer.get_feature_names())
-    # print(vectorizer.vocabulary_)
     X = vectorizer.transform(X)
-    # print(X.shape)
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.5, random_state=0, stratify=y
     )
-    # X = X[np.logical_or(y == "pos", y == "neg"), :]
-    # y = y[np.logical_or(y == "pos", y == "neg")]
-    # for label in np.unique(y):
-    #     plt.scatter(X[y == label, 0], X[y == label, 1], marker="o")
-    model = NaiveBayesClassifier()
-    model.train(X_train, y_train)
-    print(model.accuracy_score(X_train, y_train))
-    # print(model.accuracy_score(X_test, y_test))
-    # model = BernoulliNB()
-    # model.fit(X_train, y_train)
-    # print(model.score(X_train, y_train))
-    # print(model.score(X_test, y_test))
-    # Xs, ys = NaiveBayesClassifier.draw(1000)
-
-    # Xs, ys = model.draw(100)
-    # for label in np.unique(ys):
-    #     plt.scatter(Xs[ys == label, 0], Xs[ys == label, 1], marker="+")
-    # plt.show()
+    model = BernoulliNB()
+    model.fit(X_train, y_train)
+    print(model.score(X_train, y_train))
+    print(model.score(X_test, y_test))
 
 
 if __name__ == "__main__":
