@@ -1,19 +1,12 @@
 """Generative model example."""
 import numpy as np
 from data import get_imdb_data
-import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
-from nltk.stem.wordnet import WordNetLemmatizer
-import string
-import os
 import re
-from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import BernoulliNB
-from generative_model import NaiveBayesClassifier
 
 
 def cleanhtml(sentence):
@@ -88,10 +81,6 @@ def main():
     model.fit(X_train, y_train)
     print(model.score(X_train, y_train))
     print(model.score(X_test, y_test))
-    # model = NaiveBayesClassifier()
-    # model.train(X_train, y_train)
-    # print(model.accuracy_score(X_train, y_train))
-    # print(model.accuracy_score(X_test, y_test))
 
 
 if __name__ == "__main__":
