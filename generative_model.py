@@ -11,31 +11,9 @@ class Bernoulli:
         """Initialize."""
         self.p = p
 
-    def prob(self, X: np.ndarray):
-        """Compute probability of data under distribution.
-
-        X is expected to be N-by-ndims.
-        """
-        print(X)
-        x_transpose = X.transpose()
-        print(X.shape)
-        print(self.p.shape)
-        print(x_transpose.shape)
-        print(self.p)
-        print(x_transpose)
-        decrement_p = [
-            [element if element == 0 else 1 - element for element in row]
-            for row in self.p
-        ]
-        decrement_x = [[row[0][0], row[1]] for row in x_transpose]
-        print(decrement_x)
-        decrement_x = [
-            [element if element == 0 else 1 - element for element in row]
-            for row in decrement_x
-        ]
-        print(decrement_p.shape)
-        print(decrement_x.shape)
-        return self.p @ x_transpose + decrement_p @ decrement_x
+    def prob(self, X: np.ndarray) -> np.ndarray:
+        """Compute probability."""
+        return np.prod(self.p ** X * (1 - self.p) ** (1 - X), 1)
 
     def draw(self, size: int):
         """Draw samples from distribution."""
