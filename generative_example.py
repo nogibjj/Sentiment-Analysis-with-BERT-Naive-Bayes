@@ -56,7 +56,6 @@ def get_real_data_preprocessed():
                         continue
                 else:
                     continue
-
         str1 = b" ".join(filtered_sentence)
         final_string.append(str1)
         i += 1
