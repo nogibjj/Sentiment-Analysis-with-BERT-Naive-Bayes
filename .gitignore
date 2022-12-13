@@ -1,3 +1,6 @@
+# ignore processed data
+/01_processed_data/*.csv
+
 # ignore master data due to size
 /00_source_data/*.csv
 # /00_source_data/IMDB\ Dataset.csv
