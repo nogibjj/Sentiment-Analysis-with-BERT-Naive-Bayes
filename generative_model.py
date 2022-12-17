@@ -16,7 +16,7 @@ class Bernoulli:
 
         X is expected to be N-by-ndims.
         """
-        return np.prod(self.p ** X * (1 - self.p) ** (1 - X), 1)
+        return np.prod(self.p**X * (1 - self.p) ** (1 - X), 1)
 
     def draw(self, size: int):
         """Draw samples from distribution."""

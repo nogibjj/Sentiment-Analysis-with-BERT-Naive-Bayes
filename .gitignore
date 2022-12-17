@@ -1,3 +1,9 @@
+# ignore huggingface training model
+/BERT_Result/*
+
+# ignore csv files
+/*.csv
+
 # ignore processed data
 /01_processed_data/*.csv
 
