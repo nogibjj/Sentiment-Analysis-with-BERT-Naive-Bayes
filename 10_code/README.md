@@ -1,14 +1,14 @@
 # NLP Final Project
 
-IDS 703/ECE 684 2022 Fall
+## IDS 703/ECE 684 2022 Fall
 
-Team Members: 
+### Team Members: 
 - Lorna Aine 
 - Song Young Oh 
 - Dingkun Yang 
 
 
-## Folder Structure
+### Folder Structure
 **Project Code** <br>
 |-- data_cleaning.py <br>
 |-- naive_bayes_model.py <br>
