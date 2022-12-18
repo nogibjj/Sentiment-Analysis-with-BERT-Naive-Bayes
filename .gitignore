@@ -1,3 +1,9 @@
+# All the csv files
+*.csv
+
+# BERT Result
+/BERT_Result/
+
 # ignore processed data
 /01_processed_data/*.csv
 
