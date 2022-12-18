@@ -21,13 +21,24 @@ def data_cleaning(file_path, pos_standard):
 
     """Data cleaning and preprocessing for IMDB reviews"""
 
+    print("\nLoading data...")
+
     reviews_df = pd.read_csv(file_path, encoding="latin-1", usecols=["review", "label"])
+
+    print("\nData loads successfully!")
 
     standards = pos_standard
 
     reviews_df["label"].replace(
         {"neg": 0, "pos": 1}, inplace=True
     )  # replace labels with 0 and 1
+
+    print("\nCleaning data...")
+    print("Removing URLs...")
+    print("Removing numbers...")
+    print("Tokenizing sentences...")
+    print("Removing non-standard POS tags...")
+    print("\nIt may take few minutes to run...")
 
     review_clean = []
     for review in reviews_df["review"]:
@@ -47,6 +58,11 @@ def data_cleaning(file_path, pos_standard):
         {"review": review_clean, "label": reviews_df["label"]}
     )
 
+    print("\nRemoving stop words...")
+    print("Remove special characters...")
+    print("Stemming words...")
+    print("Removing HTML tags...")
+
     no_stops = []
     for review in reviews_clean_df["review"]:
         clean = re.sub(r"<.*?>", "", review)  # remove html tags
@@ -65,7 +81,12 @@ def data_cleaning(file_path, pos_standard):
     reviews_no_stops_df = pd.DataFrame(
         {"review": no_stops, "label": reviews_clean_df["label"]}
     )
+
+    print("\nData cleaning and preprocessing complete!")
+
     reviews_no_stops_df.to_csv("cleaned_reviews.csv", encoding="UTF-8", index=False)
+
+    print("\nCleaned data saved to cleaned_reviews.csv")
 
 
 if __name__ == "__main__":
