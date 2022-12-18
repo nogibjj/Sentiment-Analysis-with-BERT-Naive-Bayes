@@ -6,18 +6,16 @@ install-tensorflow:
 	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
 	/home/codespace/venv/bin/pip install -r tf-requirements.txt
 
-test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+# test:
+# 	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
 format:	
-	black *.py hugging-face/fine_tune_imdb.py
+	black *.py 10_code/*.py
 
-lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py\
-		 hugging-face/fine_tune_imdb.py
+# lint:
+# 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py\
+# 		 hugging-face/fine_tune_imdb.py
 
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
 
 checkgpu:
 	python utils/verify_pytorch.py
