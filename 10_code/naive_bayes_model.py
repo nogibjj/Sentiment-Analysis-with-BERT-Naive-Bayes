@@ -8,6 +8,10 @@ Team Members:
     - Lorna Aine
     - Song Young Oh
     - Dingkun Yang
+
+Reference:
+    - https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
+    - https://scikit-learn.org/
 """
 
 import random

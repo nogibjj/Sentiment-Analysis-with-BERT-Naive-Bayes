@@ -3,17 +3,6 @@
 
 # Sentiment Analysis on IMDb data with Naive Bayes and BERT Models
 
-## Folder Structure
-**Project Code** <br>
-|-- data_cleaning.py <br>
-|-- naive_bayes_model.py <br>
-|-- bert_model.py <br>
-|-- bert_predict.py <br>
-|-- requirements.txt <br>
-**README.md** <br>
-**NLP_Final_Project.pdf** <br>
-
-
 
 
 ### Verify GPU works

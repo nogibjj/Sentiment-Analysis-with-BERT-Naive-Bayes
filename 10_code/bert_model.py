@@ -8,6 +8,9 @@ Team Members:
     - Lorna Aine
     - Song Young Oh
     - Dingkun Yang
+
+Reference:
+    - https://huggingface.co/docs/transformers/training
 """
 
 from pprint import pprint
