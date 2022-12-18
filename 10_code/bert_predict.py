@@ -1,4 +1,14 @@
-"""BERT Prediction python Script with Pretrained Model Loaded"""
+"""BERT Prediction python Script with Pretrained Model Loaded
+
+NLP Final Project
+
+IDS 703/ECE 684 2022 Fall
+
+Team Members:
+    - Lorna Aine
+    - Song Young Oh
+    - Dingkun Yang
+"""
 
 from pprint import pprint
 import numpy as np

@@ -1,3 +1,15 @@
+""" Naive Bayes Model and Synthetic Data Generation
+
+NLP Final Project
+
+IDS 703/ECE 684 2022 Fall
+
+Team Members:
+    - Lorna Aine
+    - Song Young Oh
+    - Dingkun Yang
+"""
+
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer

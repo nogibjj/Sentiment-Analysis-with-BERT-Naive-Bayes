@@ -1,6 +1,18 @@
+"""Data cleaning and preprocessing for IMDB reviews
+
+NLP Final Project
+
+IDS 703/ECE 684 2022 Fall
+
+Team Members:
+    - Lorna Aine
+    - Song Young Oh
+    - Dingkun Yang
+"""
+
+import re
 import pandas as pd
 import nltk
-import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
