@@ -1,4 +1,4 @@
-[![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
+[![CI](https://github.com/nogibjj/Sentiment-Analysis-with-BERT-Naive-Bayes/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Sentiment-Analysis-with-BERT-Naive-Bayes/actions/workflows/cicd.yml)
 [![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
 
 # Sentiment Analysis on IMDb data with Naive Bayes and BERT Models
