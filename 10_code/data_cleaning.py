@@ -16,6 +16,11 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+# install nltk data
+nltk.download("punkt")
+nltk.download("stopwords")
+nltk.download("averaged_perceptron_tagger")
+
 
 def data_cleaning(file_path, pos_standard):
 
