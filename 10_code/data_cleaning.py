@@ -8,6 +8,11 @@ Team Members:
     - Lorna Aine
     - Song Young Oh
     - Dingkun Yang
+
+Reference:
+    - https://www.kaggle.com/utathya/imdb-review-dataset
+    - https://www.nltk.org/
+
 """
 
 import re
